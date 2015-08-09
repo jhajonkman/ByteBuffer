@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		0E5F23B61B4D73140035CFE7 /* ByteBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ByteBuffer.cpp; path = ByteBufferLibrary/ByteBuffer.cpp; sourceTree = "<group>"; };
+		0E5F23B71B4D73140035CFE7 /* ByteBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ByteBuffer.h; path = ByteBufferLibrary/ByteBuffer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0EEC186B1B4D7262003286EB = {
+			isa = PBXGroup;
+			children = (
+				0E5F23B61B4D73140035CFE7 /* ByteBuffer.cpp */,
+				0E5F23B71B4D73140035CFE7 /* ByteBuffer.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		0EEC186C1B4D7262003286EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 0EEC186F1B4D7262003286EB /* Build configuration list for PBXProject "ByteBuffer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0EEC186B1B4D7262003286EB;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		0EEC186D1B4D7262003286EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		0EEC186E1B4D7262003286EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EEC186F1B4D7262003286EB /* Build configuration list for PBXProject "ByteBuffer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EEC186D1B4D7262003286EB /* Debug */,
+				0EEC186E1B4D7262003286EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EEC186C1B4D7262003286EB /* Project object */;
+}
