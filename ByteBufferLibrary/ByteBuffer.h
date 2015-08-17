@@ -22,11 +22,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #ifndef ByteBuffer_h
 #define ByteBuffer_h
 
-#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
 
 #include "Time.h"
 #include <print.h>
@@ -37,7 +33,7 @@ public:
 	ByteBuffer();
 
 	// This method initializes the datastore of the buffer to a certain sizem the buffer should NOT be used before this call is made
-	void init(unsigned int buf_size);
+	void init(uint16_t buf_size);
 
 	// This method resets the buffer into an original state (with no data)	
 	void clear();
@@ -46,16 +42,16 @@ public:
 	void deAllocate();
 
 	// Returns how much space is left in the buffer for more data
-	int getFreeSize();
+	uint16_t getFreeSize();
 
 	// Returns how much space is used in the buffer
-	int getSize();
+	uint16_t getSize();
 
 	// Returns the maximum capacity of the buffer
-	int getCapacity();
+	uint16_t getCapacity();
 
 	// This method returns the byte that is located at index in the buffer but doesn't modify the buffer like the get methods (doesn't remove the retured byte from the buffer)
-	byte peek(unsigned int index);
+	byte peek(uint16_t index);
 
 	//
 	// Put methods, either a regular put in back or put in front
@@ -99,14 +95,14 @@ public:
 	float getFloat();	
 	float getFloatFromBack();
     
-    uint8_t* getByteBuffer();
+    byte* getByteBuffer();
 
 private:
 	byte* data;
 
-	unsigned int capacity;
-	unsigned int position;
-	unsigned int length;
+	uint16_t capacity;
+	uint16_t position;
+	uint16_t length;
 };
 
 #endif

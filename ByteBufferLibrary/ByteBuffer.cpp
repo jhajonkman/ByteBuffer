@@ -19,12 +19,7 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
  
-#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
-
 #include "ByteBuffer.h"
 
 
@@ -32,7 +27,7 @@ ByteBuffer::ByteBuffer(){
 
 }
 
-void ByteBuffer::init(unsigned int buf_length){
+void ByteBuffer::init(uint16_t buf_length){
 	data = (byte*)malloc(sizeof(byte)*buf_length);
 	capacity = buf_length;
 	position = 0;
@@ -48,19 +43,19 @@ void ByteBuffer::clear(){
 	length = 0;
 }
 
-int ByteBuffer::getFreeSize(){
+uint16_t ByteBuffer::getFreeSize(){
 	return capacity - length;
 }
 
-int ByteBuffer::getSize(){
+uint16_t ByteBuffer::getSize(){
 	return length;
 }
 
-int ByteBuffer::getCapacity(){
+uint16_t ByteBuffer::getCapacity(){
 	return capacity;
 }
 
-byte ByteBuffer::peek(unsigned int index){
+byte ByteBuffer::peek(uint16_t index){
 	byte b = data[(position+index)%capacity];
 	return b;
 }
@@ -306,8 +301,8 @@ float ByteBuffer::getFloatFromBack(){
 	return ret;
 }
 
-uint8_t* ByteBuffer::getByteBuffer() {
-    return (uint8_t *)data;
+byte* ByteBuffer::getByteBuffer() {
+    return data;
 }
 
 
