@@ -5,4 +5,7 @@
 #
 #  Created by Jeroen Jonkman on 23-06-15.
 #
-rsync -tarvg /Users/jeroenjonkman/Developer/ByteBuffer/ /Volumes/jeroenjonkman/Developer/ByteBuffer/
+MAC020="/Users/jeroenjonkman/Developer/ByteBuffer/"
+MAC001="/Volumes/jeroenjonkman/Developer/ByteBuffer/"
+rsync -taruvg ${MAC020} ${MAC001}
+rsync -taruvg ${MAC001} ${MAC020}
